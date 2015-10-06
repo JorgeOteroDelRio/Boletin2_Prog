@@ -78,6 +78,23 @@ public static final String ANSI_RED = "\u001B[31m";
         rendaMensual = (n * (1 + i) * 1 * t * i)/((1*t*i)*1*t-i);
         System.out.println("La renda mensual es igual a " + rendaMensual);
         
+        //Ejercicio 8
+        float graosC, graosK, graosF;
+        System.out.println("Introduzca os graos centígrados que quere pasar a kelvin e farenheit: ");
+        graosC = teclado.nextByte();
+        graosK = graosC + 273;
+        graosF = graosC * (9/5) + 32;
+        System.out.println(graosC + " ºC son " + graosK + " ºK e " + graosF + " ºF");
+        
+        //Ejercicio 9
+        int billetes100, billetes20, billetes10, monedas, totalDinero;
+        System.out.println("Introduzca cuantos billetes de 100, 20 y 10 tiene junto al numero de monedas respectivamente: ");
+        billetes100 = teclado.nextInt();
+        billetes20 = teclado.nextInt();
+        billetes10 = teclado.nextInt();
+        monedas = teclado.nextInt();
+        totalDinero = (billetes100 * 100) + (billetes20 * 20) + (billetes10 * 10) + monedas;
+        System.out.println("La cantidad de dinero que usted tiene es de " + totalDinero);
         
         
     }
