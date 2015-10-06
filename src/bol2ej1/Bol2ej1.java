@@ -75,10 +75,12 @@ public static final String ANSI_RED = "\u001B[31m";
         t = teclado.nextFloat();
         t *= 12;
         i /= 12;
-        rendaMensual = (n * (1 + i) * 1 * t * i)/((1*t*i)*1*t-i);
-        System.out.println("La renda mensual es igual a " + rendaMensual);
+        rendaMensual = i * n * (float)Math.pow(1 + i,t);
+        rendaMensual = rendaMensual / (float)(Math.pow(1+i,t) - 1);
+        System.out.println("La renda mensual es igual a " + Math.round(rendaMensual));
         
         //Ejercicio 8
+        System.out.println(ANSI_RED + "|Ejercicio 8|"+ ANSI_RED);
         float graosC, graosK, graosF;
         System.out.println("Introduzca os graos centígrados que quere pasar a kelvin e farenheit: ");
         graosC = teclado.nextByte();
@@ -87,6 +89,7 @@ public static final String ANSI_RED = "\u001B[31m";
         System.out.println(graosC + " ºC son " + graosK + " ºK e " + graosF + " ºF");
         
         //Ejercicio 9
+        System.out.println(ANSI_RED + "|Ejercicio 9|"+ ANSI_RED);
         int billetes100, billetes20, billetes10, monedas, totalDinero;
         System.out.println("Introduzca cuantos billetes de 100, 20 y 10 tiene junto al numero de monedas respectivamente: ");
         billetes100 = teclado.nextInt();
@@ -94,7 +97,7 @@ public static final String ANSI_RED = "\u001B[31m";
         billetes10 = teclado.nextInt();
         monedas = teclado.nextInt();
         totalDinero = (billetes100 * 100) + (billetes20 * 20) + (billetes10 * 10) + monedas;
-        System.out.println("La cantidad de dinero que usted tiene es de " + totalDinero);
+        System.out.println("La cantidad de dinero que usted tiene es de " + totalDinero + "€");
         
         
     }
