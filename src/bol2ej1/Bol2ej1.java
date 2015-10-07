@@ -1,6 +1,7 @@
 
 package bol2ej1;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Bol2ej1 {
 public static final String ANSI_RED = "\u001B[31m";
@@ -99,6 +100,37 @@ public static final String ANSI_RED = "\u001B[31m";
         totalDinero = (billetes100 * 100) + (billetes20 * 20) + (billetes10 * 10) + monedas;
         System.out.println("La cantidad de dinero que usted tiene es de " + totalDinero + "€");
         
+        //Ejercicio 10
+        System.out.println(ANSI_RED + "|Ejercicio 10|"+ ANSI_RED);
+        int cantidadEuros, billetes_100, billetes_20, billetes_5, moedas;
+        System.out.println("Introduzca la cantidad de dinero que tiene:");
+        cantidadEuros = teclado.nextInt();
+        billetes_100 = cantidadEuros / 100;
+        billetes_20 = (cantidadEuros % 100) / 20;
+        billetes_5 = (cantidadEuros % 20) / 5;
+        moedas = (cantidadEuros % 5);
+        System.out.print("100 --> " + billetes_100 + "\n20--> " + billetes_20 + "\n5--> " + billetes_5 + "\nMonedas--> " + moedas + "\n");
+        
+        //Ejercicio 11
+        System.out.println(ANSI_RED + "|Ejercicio 11|"+ ANSI_RED);
+        float soldoFixo, soldoLiquido, N_quilometros;
+        int dias_desprazamentos, N_ventas;
+        final int comision = 5;
+        System.out.println("Introduce tu sueldo fijo: ");
+        soldoFixo = teclado.nextFloat();
+        System.out.println("Introduce el numero de ventas de este mes: ");
+        N_ventas = teclado.nextInt();
+        System.out.println("Introduce el numero de quilomtros recorridos: ");
+        N_quilometros = teclado.nextFloat();
+        System.out.println("Introduzca el numero de días que se ha desplazado este mes: ");
+        dias_desprazamentos = teclado.nextInt();
+        soldoLiquido = soldoFixo + (N_ventas * comision / 100) + (N_quilometros * 2) + (dias_desprazamentos * 30);
+        System.out.println("Su sueldo líquido es de " + soldoLiquido + " €");
+        
+        //Ejercicio 12
+        System.out.println(ANSI_RED + "|Ejercicio 12|"+ ANSI_RED);
+        float soldoIRPFySS = (soldoFixo - (soldoFixo * 18 /100)) - 36;
+        System.out.println("O soldo a precibir é de " + soldoIRPFySS + (N_ventas * comision / 100) + (N_quilometros * 2) + (dias_desprazamentos * 30));
         
     }
     
